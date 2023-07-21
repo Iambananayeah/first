@@ -1,3 +1,4 @@
+using Fungus;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,9 +6,10 @@ using UnityEngine;
 public class DialogueManager : MonoInstance<DialogueManager>
 {
     // Start is called before the first frame update
-    public GameObject mainMenu;
+
     public GameObject diaBG;
     public GameObject diaMenu;
+
     void Start()
     {
         
@@ -22,7 +24,7 @@ public class DialogueManager : MonoInstance<DialogueManager>
     public void EnterDialogue()
     {
         //Debug.Log(666);
-        UnShowMainMenu();
+        MainMenuManager.Instance.UnShowMainMenu();
         Invoke("ShowDialogueBG", 0.5f);
 
     }
@@ -30,21 +32,14 @@ public class DialogueManager : MonoInstance<DialogueManager>
     public void ExitDialogue()
     {
         UnShowDiaMenu();
-        Invoke("ShowMainMenu", 0.5f);
+        MainMenuManager.Instance.Invoke("ShowMainMenu", 0.5f);
         Invoke("UnShowDialogueBG", 0.5f);
+        FungusManager.Instance.GetComponent<AudioSource>().Stop();
     }
 
     
 
-    protected void UnShowMainMenu()
-    {
-        mainMenu.SetActive(false);
-    }
 
-    protected void ShowMainMenu()
-    {
-        mainMenu.SetActive(true);
-    }
 
     protected void UnShowDiaMenu()
     {

@@ -51,7 +51,8 @@ public class StartGuider : MonoBehaviour
 
     public void EndChoose()
     {
-        GameManager.Instance.role = chosenRole;
+        //GameManager.Instance.role = chosenRole;
         SceneManager.LoadScene("Main Menu");
+        GameManager.Instance.NewGameInit(chosenRole);
     }
 }
