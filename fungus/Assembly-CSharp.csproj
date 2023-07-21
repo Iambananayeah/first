@@ -53,11 +53,11 @@
     <UnityVersion>2020.3.16f1c1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Role.cs" />
-    <Compile Include="Assets\Scripts\Managers\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Tools\MonoInstance.cs" />
-    <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Role.cs" />
     <Compile Include="Assets\Scripts\Managers\StartGuider.cs" />
+    <Compile Include="Assets\Scripts\Managers\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

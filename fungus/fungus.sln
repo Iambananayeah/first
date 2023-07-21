@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fungus", "Fungus.csproj", "{704C022E-E655-9CF2-DFE5-A4B9AFA71FCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FungusExamples", "FungusExamples.csproj", "{F5A08A9F-176A-304E-9F41-A794DF306153}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{110FE841-D678-4769-07B1-8170A9C1D250}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FungusExamples", "FungusExamples.csproj", "{F5A08A9F-176A-304E-9F41-A794DF306153}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FungusPlayModeTests", "FungusPlayModeTests.csproj", "{E462F25F-B3F2-53FB-F62C-EFB1A2256001}"
 EndProject
@@ -31,14 +31,14 @@ Global
 		{704C022E-E655-9CF2-DFE5-A4B9AFA71FCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{704C022E-E655-9CF2-DFE5-A4B9AFA71FCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{704C022E-E655-9CF2-DFE5-A4B9AFA71FCA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F5A08A9F-176A-304E-9F41-A794DF306153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F5A08A9F-176A-304E-9F41-A794DF306153}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F5A08A9F-176A-304E-9F41-A794DF306153}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F5A08A9F-176A-304E-9F41-A794DF306153}.Release|Any CPU.Build.0 = Release|Any CPU
 		{110FE841-D678-4769-07B1-8170A9C1D250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{110FE841-D678-4769-07B1-8170A9C1D250}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{110FE841-D678-4769-07B1-8170A9C1D250}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{110FE841-D678-4769-07B1-8170A9C1D250}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5A08A9F-176A-304E-9F41-A794DF306153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5A08A9F-176A-304E-9F41-A794DF306153}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5A08A9F-176A-304E-9F41-A794DF306153}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5A08A9F-176A-304E-9F41-A794DF306153}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E462F25F-B3F2-53FB-F62C-EFB1A2256001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E462F25F-B3F2-53FB-F62C-EFB1A2256001}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E462F25F-B3F2-53FB-F62C-EFB1A2256001}.Release|Any CPU.ActiveCfg = Release|Any CPU
