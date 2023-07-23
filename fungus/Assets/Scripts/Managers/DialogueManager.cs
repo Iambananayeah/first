@@ -2,6 +2,13 @@ using Fungus;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
+public enum EDialogueType
+{ 
+    RoleTalk=1,
+
+}
 
 public class DialogueManager : MonoInstance<DialogueManager>
 {
@@ -20,26 +27,53 @@ public class DialogueManager : MonoInstance<DialogueManager>
     {
         
     }
-
     public void EnterDialogue()
     {
-        //Debug.Log(666);
-        MainMenuManager.Instance.UnShowMainMenu();
+
+        EnterDialogue(1);
+    }
+    public void EnterDialogue(int dialogueType=1)
+    {
+        EDialogueType type = (EDialogueType)dialogueType;
+        if(type==EDialogueType.RoleTalk)
+        {
+            RoleManager.Instance.role.hasChat = false;
+        }
+
+        MainMenuManager.Instance.UnShowMainMenu();//to do 
         Invoke("ShowDialogueBG", 0.5f);
+
+    }
+
+    public void TryEnterDialogue()
+    {
 
     }
 
     public void ExitDialogue()
     {
+        RoleManager.Instance.UpdateRoleDataAfterDialogue();
         UnShowDiaMenu();
         MainMenuManager.Instance.Invoke("ShowMainMenu", 0.5f);
         Invoke("UnShowDialogueBG", 0.5f);
         FungusManager.Instance.GetComponent<AudioSource>().Stop();
+        
+    }
+    public void ExitDialogueShit()
+    {
+        RoleManager.Instance.UpdateRoleDataAfterDialogue();
+        UnShowDiaMenu();
     }
 
-    
-
-
+    public void ChangeRoleSprite()
+    {
+        GameObject lyric = GameObject.Find("Lyric holder");
+        Image image = lyric.GetComponentInChildren<Image>();
+        string path = "Role/Lyric_light";
+        Sprite sprite = Resources.Load<Sprite>(path);
+        Debug.Log(7467);
+        image.sprite = sprite;
+    }
 
     protected void UnShowDiaMenu()
     {
@@ -54,12 +88,10 @@ public class DialogueManager : MonoInstance<DialogueManager>
     protected void ShowDialogueBG()
     {
         diaBG.SetActive(true);
-
     }
 
     protected void UnShowDialogueBG()
     {
         diaBG.SetActive(false);
-
     }
 }

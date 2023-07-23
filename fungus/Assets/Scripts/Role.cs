@@ -1,3 +1,4 @@
+using Fungus;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,16 +18,58 @@ public class Role
     private int skill;
     private int suki;
 
-    public int San { get => san; set => san = value; }
-    public int Skill { get => skill; set => skill = value; }
-    public int Suki { get => suki; set => suki = value; }
+    private Flowchart flowchart;
 
-    public Role(ERoles role)
+    public int San
     {
+        set 
+        {
+            if(flowchart)
+                flowchart.SetIntegerVariable("san",value);
+
+            san = value;
+        }
+        get
+        {
+            return san;
+        }
+    }
+    public int Skill
+    {
+        set
+        {
+            if (flowchart)
+                flowchart.SetIntegerVariable("skill", value);
+
+            skill= value;
+        }
+        get
+        {
+            return skill;
+        }
+    }
+    public int Suki
+    {
+        set
+        {
+            if (flowchart)
+                flowchart.SetIntegerVariable("suki", value);
+
+            suki = value;
+        }
+        get
+        {
+            return suki;
+        }
+    }
+
+    public Role(ERoles role,Flowchart flowChart)
+    {
+        this.flowchart = flowChart;
         roleType = role;
         hasChat = true;
-        san = 50;
-        skill = 10;
-        suki = 30;
+        San = 50;
+        Skill = 10;
+        Suki = 30;
     }
 }

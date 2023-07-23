@@ -34,7 +34,7 @@ public class GameManager : MonoInstance<GameManager>
 
     public void NewGameInit(ERoles role)
     {
-        RoleManager.Instance.role = new Role(role);
+       // RoleManager.Instance.role = new Role(role,null);
     }
 
 
