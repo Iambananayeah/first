@@ -35,10 +35,10 @@ public class DialogueManager : MonoInstance<DialogueManager>
     public void EnterDialogue(int dialogueType=1)
     {
         EDialogueType type = (EDialogueType)dialogueType;
-        if(type==EDialogueType.RoleTalk)
+       /* if(type==EDialogueType.RoleTalk)
         {
             RoleManager.Instance.role.hasChat = false;
-        }
+        }*/
 
         MainMenuManager.Instance.UnShowMainMenu();//to do 
         Invoke("ShowDialogueBG", 0.5f);
@@ -52,7 +52,7 @@ public class DialogueManager : MonoInstance<DialogueManager>
 
     public void ExitDialogue()
     {
-        RoleManager.Instance.UpdateRoleDataAfterDialogue();
+        PeopleManager.Instance.UpdateRoleDataAfterDialogue();
         UnShowDiaMenu();
         MainMenuManager.Instance.Invoke("ShowMainMenu", 0.5f);
         Invoke("UnShowDialogueBG", 0.5f);
@@ -61,7 +61,7 @@ public class DialogueManager : MonoInstance<DialogueManager>
     }
     public void ExitDialogueShit()
     {
-        RoleManager.Instance.UpdateRoleDataAfterDialogue();
+        PeopleManager.Instance.UpdateRoleDataAfterDialogue();
         UnShowDiaMenu();
     }
 

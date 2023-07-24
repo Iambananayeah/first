@@ -18,7 +18,7 @@ public class PlanMenuManager : MonoInstance<PlanMenuManager>
         MainMenuManager.Instance.UnShowMainMenu();
         ShowPlanMenuBG();
         ShowPlanMenuUI();
-        Role role = RoleManager.Instance.role;
+        Person role = PeopleManager.Instance.role;
         sanText.text = "精神：" + role.San.ToString();
         skillText.text = "演技：" + role.Skill.ToString();
         sukiText.text = "好感：" + role.Suki.ToString();

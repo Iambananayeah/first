@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MainMenuManager : MonoInstance<MainMenuManager>
 {
     public GameObject mainMenu;
-    public GameObject hasChatImage;
+    //public GameObject hasChatImage;
     public Text sanText;
     public Text skillText;
     public Text sukiText;
@@ -34,8 +34,8 @@ public class MainMenuManager : MonoInstance<MainMenuManager>
     public void ShowMainMenu()
     {
         mainMenu.SetActive(true);
-        hasChatImage.SetActive(RoleManager.Instance.role.hasChat);
-        Role role = RoleManager.Instance.role;
+       // hasChatImage.SetActive(RoleManager.Instance.role.hasChat);
+        Person role = PeopleManager.Instance.role;
         sanText.text = "精神：    " + role.San.ToString();
         skillText.text = "演技：    " + role.Skill.ToString();
         sukiText.text = "好感：    " + role.Suki.ToString();
